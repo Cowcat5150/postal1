@@ -57,6 +57,9 @@
 
 #include "slist.h"
 
+#undef Insert // Cowcat
+#undef Remove //
+
 // Node for RPQueue.
 template <class T, class K> class RPQueueNode
 	{

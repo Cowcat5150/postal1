@@ -199,6 +199,7 @@
 #define RESMGR_H
 
 #include <ctype.h>
+#undef bind // Cowcat
 
 #include "Blue.h"
 #ifdef PATHS_IN_INCLUDES

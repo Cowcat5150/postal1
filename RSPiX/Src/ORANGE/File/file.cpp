@@ -348,6 +348,9 @@ static void locateCorrectCase(char *buf)
 #endif
 }
 
+#if defined(MORPHOSs) // needed? - Cowcat
+#define alloca					__builtin_alloca
+#endif
 
 extern const char *FindCorrectFile(const char *_pszName, const char *pszMode)
 {
@@ -405,7 +408,14 @@ extern const char *FindCorrectFile(const char *_pszName, const char *pszMode)
             if (prefpath[strlen(prefpath)-1] != '/') strcat(prefpath, "/");
 
             strcat(prefpath, "Library/Application Support/Postal Plus/");
+
+            #elif defined(MORPHOSs)  // nope - Cowcat
+
+            char *homedir = NULL;
+	        snprintf(homedir, 9, "%s", "PROGDIR:");
+
             #else
+
             const char *homedir = getenv("HOME");
             const char *xdghomedir = getenv("XDG_DATA_HOME");
             const char *append = "";

@@ -91,6 +91,8 @@
 #include "BufQ.h"
 #include "input.h"
 
+#undef GetMsg // Cowcat
+#undef Remove
 
 ////////////////////////////////////////////////////////////////////////////////
 // Function makes it easy to get socket address from buffer queue

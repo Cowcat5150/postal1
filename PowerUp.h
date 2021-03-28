@@ -84,6 +84,8 @@
 #include "item3d.h"
 #include "StockPile.h"
 
+#undef Remove // Cowcat
+
 class CPowerUp : public CItem3d
 	{
 	//---------------------------------------------------------------------------

@@ -1,0 +1,18 @@
+
+Compile notes: gcc 9.3.0 with SDL_2.0.12 SDK.
+ 
+Game needs GoG Postal Classic and Uncut version (free). Other versions may fail loading data.
+
+Put res/ title/ dirs from GoG and morphos executable + the provided POSTAL.INI in some place.
+
+Game creates a ./PostalPlus dir where the .INI file is copied and can be modified.
+
+Launch game with --resolution 640x480 for performance.
+
+Other options: --windowed
+Debug (fps) can be enabled in POSTAL.INI.
+
+Game notes:
+	Save only works when you finish the level.
+	No prompt is showed when a level is finished: Use F1 key.
+	Demo loading not working (some path problems).

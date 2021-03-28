@@ -746,7 +746,11 @@ extern int16_t rspSetVideoMode(	// Returns 0 if successfull, non-zero otherwise
         SDL_RenderSetLogicalSize(sdlRenderer, FramebufferWidth, FramebufferHeight);
 		TRACE("SDL Renderer set: %ix%i\n", FramebufferWidth, FramebufferHeight);
 #endif
+        #if defined(MORPHOS)
+        sdlTexture = SDL_CreateTexture(sdlRenderer, SDL_PIXELFORMAT_BGRA8888, SDL_TEXTUREACCESS_STREAMING, FramebufferWidth, FramebufferHeight);
+        #else
         sdlTexture = SDL_CreateTexture(sdlRenderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, FramebufferWidth, FramebufferHeight);
+        #endif
         if (!sdlTexture)
         {
             char buf[128];

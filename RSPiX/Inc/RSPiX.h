@@ -32,6 +32,12 @@
 #ifndef RSPiX_H
 #define RSPiX_H
 
+#if defined(MORPHOS)
+typedef int socklen_t;
+//#undef Remove
+//#undef GetMsg
+#endif
+
 #include "RSPiXUnix.h"
 
 #endif // RSPiX_H

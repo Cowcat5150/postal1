@@ -186,6 +186,8 @@ static int16_t SetupVideo(					// Returns 0 on success.
 	wideScreenWidth = 850;
 #elif defined(PANDORA)
 	wideScreenWidth = 800;
+#elif defined(MORPHOS)
+    wideScreenWidth = 640; // no black borders - fix crash on closing game(?) - Cowcat
 #else
 	//wideScreenWidth = 640;
 
